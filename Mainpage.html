@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Mainpage.css">
+</head>
+<body>
+<div style="position: fixed; top: 0px; width:100%; height: 100px;">
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="Images/Samsung-Logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="Images/mobile.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                <img src="Images/camera.png" />
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12mp, Wide Angle lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                <img src="Images/processor.png" />
+                    <div>
+                        <h1>Processor</h1>
+                        <p>SnapDragon 8695 Hexa-core 11 nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                <img src="Images/display.png" />
+                    <div>
+                        <h1>Display</h1>
+                        <p>"6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                <img src="Images/battery.png"/>
+                    <div>
+                        <h1>Battery Life</h1>
+                        <p>5000mAh,720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+           <img src="Images/arrow.png" id="upbtn">
+            <h3>Features</h3>
+            <img src="Images/arrow.png" id="downbtn">
+        </div>
+    </div>
+    </div>
+    <script>
+        var circle =document.getElementById("circle");
+        var upbtn =document.getElementById("upbtn");
+        var downbtn =document.getElementById("downbtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick = function(){
+            rotateSum=rotateValue + "rotate(-90deg)";
+            circle.style.transform= rotateSum;
+            rotateValue = rotateSum;
+        }
+        downbtn.onclick = function(){
+            rotateSum=rotateValue + "rotate(90deg)";
+            circle.style.transform= rotateSum;
+            rotateValue = rotateSum;
+        }
+    </script>
+
+
+</body>
+</html>
